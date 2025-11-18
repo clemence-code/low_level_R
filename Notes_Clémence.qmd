@@ -8,6 +8,7 @@ editor: visual
 ## Types and classes
 
 ### Types
+
 ```{r}
 typeof(1.5)
 typeof("toto")
@@ -20,6 +21,7 @@ typeof(list())
 ```
 
 ### Classes
+
 ```{r}
 iris
 typeof(iris)
@@ -27,6 +29,7 @@ class(iris)
 ```
 
 ## Vectors
+
 Many things in R are vectors( and most of the other things are lists). A vector is a collection of values of the same type (possibly a single value).
 
 ```{r}
@@ -62,4 +65,3 @@ complicated <-"💕😁😉😉😆R是一门很好的编程语言"
 length(complicated)
 str_length(complicated)
 ```
-
