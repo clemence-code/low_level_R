@@ -56,7 +56,9 @@ str_length(z)
 ```
 
 ```{r}
-complicated <-"💕😁😉😉😆"
-
+complicated <-"💕😁😉😉😆 R是一门很好的编程语言"
+length(complicated)
+str_length(complicated)
 ```
+
 
