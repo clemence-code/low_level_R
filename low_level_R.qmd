@@ -4,8 +4,10 @@ format: html
 editor: visual
 ---
 
-## Types and classes 
+## Types and classes
+
 ### Types
+
 ```{r}
 typeof(1.5)#double: numerical value
 typeof("toto")
@@ -16,19 +18,15 @@ typeof(1)
 typeof(typeof)
 typeof(list())
 ```
-types defined set with associated operations.
-double roughly real numbers.
-everything id a double if you don't tell R integer.
-logical for testing.
-### Classes
+
+types defined set with associated operations. double roughly real numbers. everything id a double if you don't tell R integer. logical for testing. \### Classes
+
 ```{r}
 iris
 typeof(iris)
 class(iris)
 class(1)#we don't really care just concept to have in mind
 ```
-
-
 
 ## Vectors
 
@@ -78,6 +76,7 @@ str_to_upper(some_values)
 ```
 
 ### Indexing
+
 ```{r}
 x <- c(6,5,1,2,3,4)
 y <- c(6,5,1,2,3,4)
@@ -95,9 +94,10 @@ Assignment can be understood as a value semantic assignment : `x` and `y` are di
 y <- x
 ```
 
-Therefore, modifying `x` has no effect on `y`. 
+Therefore, modifying `x` has no effect on `y`.
 
 Indexing is made with vectors of any length.
+
 ```{r}
 x
 x[c(2,2,1,4,3)]
@@ -136,3 +136,106 @@ x
 x[c(2,10)] <- c(123,456)
 x
 ```
+
+
+```{r}
+y<-c("A","B","C")
+y
+y[c(TRUE, FALSE, TRUE)]
+```
+## Lists
+
+Vectors must be type uniform, which will trigger a conversion to character in many cases.
+
+```{r}
+broken<-c(1L, 1.5,"toto",FALSE)
+broken
+typeof(broken)
+```
+Lists do not have this limitation.
+
+### Creating a list
+
+```{r}
+bar <- list(1L,1.5, "toto", FALSE) #use list instead of c
+bar
+```
+```{r}
+typeof(bar)
+length(bar)
+```
+A list can be understood as vector of "vectors". Functions are not a vector.
+
+```{r}
+foo <- list(c(1,2,3), TRUE, length)
+foo
+length(foo)
+```
+### Indexing
+```{r}
+foo
+foo[1]
+cat("###\n")
+foo[-2]
+cat("###\n")
+foo[c(3,2,2,1)]
+```
+
+Lists, they behave like vectors if you use the single brackets. 
+```{r}
+foo[0]
+foo[4]
+```
+NULL missing object not NA missing value. 
+
+### Side step: weird values
+
+```{r}
+NA#missing value
+NULL#missing object
+NaN#not a number
+```
+NULL not shown as a vector.
+
+```{r}
+0/0
+1/0
+-1/0
+1/0-1/0
+1/0+1
+1/0-10e10
+1/Inf
+```
+```{r}
+NA_real_+1
+1/NA_real_
+```
+```{r}
+NULL+1
+```
+### Back to indexing*
+```{r}
+x<-list(c(1,2,3), c(TRUE,FALSE), LETTERS[10:15])
+x
+```
+```{r}
+x[c(1,4,5)]
+```
+```{r}
+x[5]<-c(-2,1)
+x
+```
+
+```{r}
+x[5]<-list(c(-2,1))
+x
+```
+
+```{r}
+y<-c(1,2,3)
+y
+y[4]<-"toto"
+y
+```
+
+
