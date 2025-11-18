@@ -8,6 +8,7 @@ editor: visual
 ## Types and classes
 
 ### Types
+
 ```{r}
 typeof(1.5)
 typeof("toto")
@@ -20,6 +21,7 @@ typeof(list())
 ```
 
 ### Classes
+
 ```{r}
 iris
 typeof(iris)
@@ -27,8 +29,9 @@ class(iris)
 ```
 
 ## Vectors
-Many things in R are vectors( and most of the other things are lists).
-A vector is a collection of values of the same type (possibly a single value).
+
+Many things in R are vectors( and most of the other things are lists). A vector is a collection of values of the same type (possibly a single value).
+
 ```{r}
 x <- 15.25
 length(x)
@@ -42,12 +45,14 @@ c(x,y)
 ```
 
 ### Character vectors
+
 ```{r}
 z <- "Bob"
 length(z)
 ```
 
 Salvation comes from the `stringr` package.
+
 ```{r}
 library(stringr)
 ```
@@ -61,6 +66,7 @@ complicated <-"💕😁😉😉😆R是一门很好的编程语言"
 length(complicated)
 str_length(complicated)
 ```
+<<<<<<< HEAD
 
 ```{r}
 some_values <- c("💕😁😉😉😆","R是一门很好的编程语言")
@@ -134,3 +140,5 @@ x
 
 
 
+=======
+>>>>>>> 6e0beeaf93bbc7753e5feb5d3f24777bd22c8321

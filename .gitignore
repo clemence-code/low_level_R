@@ -3,7 +3,6 @@
 .RData
 .Ruserdata
 .DS_Store
-
 cache
 download
 README.html
@@ -11,3 +10,5 @@ Notes_Clémence.html
 Notes_Clémence_files
 Valentine_Petzold.html
 Valentine_Petzold_files
+low_level_R_files
+low_level_R.html

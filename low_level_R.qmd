@@ -3,3 +3,27 @@ title: "low_level_R"
 format: html
 editor: visual
 ---
+
+## Types and classes 
+### Types
+```{r}
+typeof(1.5)#double: numerical value
+typeof("toto")
+typeof('also between single quotes')
+typeof(TRUE)
+typeof(1L)
+typeof(1)
+typeof(typeof)
+typeof(list())
+```
+types defined set with associated operations.
+double roughly real numbers.
+everything id a double if you don't tell R integer.
+logical for testing.
+### Classes
+```{r}
+iris
+typeof(iris)
+class(iris)
+class(1)#we don't really care just concept to have in mind
+---
