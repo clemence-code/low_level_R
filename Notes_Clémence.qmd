@@ -4,3 +4,16 @@ author: "Clémence HUANG"
 format: html
 editor: visual
 ---
+
+## Types and classes
+```{r}
+typeof(1.5)
+typeof("toto")
+typeof('also between single quotes')
+typeof(TRUE)
+typeof(1L)
+typeof(1)
+typeof(typeof)
+typeof(list())
+```
+
