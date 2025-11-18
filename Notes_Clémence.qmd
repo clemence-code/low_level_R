@@ -37,6 +37,7 @@ length(x)
 The `c` function can be seen as a creation function or, more accurately, as a vector concatenation function.
 
 ```{r}
+y <- 15.25
 c(x,y)
 ```
 
@@ -68,5 +69,68 @@ length(some_values)
 str_length(some_values)
 str_to_upper(some_values)
 ```
+
+### Indexing
+```{r}
+x <- c(6,5,1,2,3,4)
+y <- c(6,5,1,2,3,4)
+x[3]
+```
+
+```{r}
+x[4] <- 15
+x
+```
+
+Assignment can be understood as a value semantic assignment : `x` and `y` are different vectors with the same initial content.
+
+```{r}
+y <- x
+```
+
+Therefore, modifying `x` has no effect on `y`. 
+
+Indexing is made with vectors of any length.
+```{r}
+x
+x[c(2,2,1,4,3)]
+```
+
+```{r}
+x[0]
+x[7]
+x[10]
+```
+
+```{r}
+typeof(NA_integer_)
+NA_integer_
+```
+
+```{r}
+x
+x[c(4,1,0,15)]
+```
+
+```{r}
+c(numeric(0),5,numeric(0))
+```
+
+```{r}
+y <- c("A","B","C")
+y
+y[c(TRUE,FALSE,TRUE)]
+```
+
+```{r}
+x
+x[c(1,4)] <- c(-34,22)
+x
+x[c(2,10)] <- c(123,456)
+x
+```
+
+
+
 
 
