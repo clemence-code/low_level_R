@@ -76,10 +76,10 @@ library(stringr)
 str_length(z)
 ```
 ```{r}
-#complicated<-""
-#complicated
-#lenght(complicated)
-#str_length(complicated)
+complicated<-"💕😁😉😉😆"
+complicated
+length(complicated)
+str_length(complicated)
 ```
 
 ```{r}
