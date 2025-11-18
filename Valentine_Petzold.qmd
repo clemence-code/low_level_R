@@ -55,4 +55,37 @@ c(x,y) #combine vectors
 
 The 'c' function can be seen as a creation function or, more accurately, as a vector concatenantion function.*
 
+### Character vectors
+
+This is not R strength...
+
+```{r}
+z<- "Alice"
+length(z)
+```
+In R everything is a vector so here only 1 not 5.
+pearl language
+
+Salvation comes from the 'stringr' package.
+
+```{r}
+library(stringr)
+```
+
+```{r}
+str_length(z)
+```
+```{r}
+#complicated<-""
+#complicated
+#lenght(complicated)
+#str_length(complicated)
+```
+
+```{r}
+#some_values<-c("")
+#some_values
+#length(some_values)
+#str_length(some_values)
+```
 
