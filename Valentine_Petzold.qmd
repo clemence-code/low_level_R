@@ -25,8 +25,34 @@ logical for testing.
 iris
 typeof(iris)
 class(iris)
+class(1)#we don't really care just concept to have in mind
+```
+## Vectors
+### Introduction
+Many things in R are vectors (and most of the other things are lists).
+Vector: a collection of values of the same type.
+
+```{r}
+x<-15.25
+length(x)# all vectors have a length
+x[1] # access to elements
+```
+```{r}
+length(length(x))
+typeof(length(x))
+
+```
+```{r}
+y<-c(1,-2,45,1.5,-1e-10)
+y
+typeof(y)
+y[2]
+length(y)
+```
+```{r}
+c(x,y) #combine vectors
 ```
 
-
+The 'c' function can be seen as a creation function or, more accurately, as a vector concatenantion function.*
 
 
