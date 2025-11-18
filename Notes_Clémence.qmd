@@ -40,7 +40,7 @@ length(x)
 The `c` function can be seen as a creation function or, more accurately, as a vector concatenation function.
 
 ```{r}
-y<-15.25
+
 c(x,y)
 ```
 
