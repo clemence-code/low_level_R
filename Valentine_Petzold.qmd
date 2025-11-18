@@ -184,5 +184,71 @@ foo <- list(c(1,2,3), TRUE, length)
 foo
 length(foo)
 ```
+### Indexing
+```{r}
+foo
+foo[1]
+cat("###\n")
+foo[-2]
+cat("###\n")
+foo[c(3,2,2,1)]
+```
+
+Lists, they behave like vectors if you use the single brackets. 
+```{r}
+foo[0]
+foo[4]
+```
+NULL missing object not NA missing value. 
+
+### Side step: weird values
+
+```{r}
+NA#missing value
+NULL#missing object
+NaN#not a number
+```
+NULL not shown as a vector.
+
+```{r}
+0/0
+1/0
+-1/0
+1/0-1/0
+1/0+1
+1/0-10e10
+1/Inf
+```
+```{r}
+NA_real_+1
+1/NA_real_
+```
+```{r}
+NULL+1
+```
+### Back to indexing*
+```{r}
+x<-list(c(1,2,3), c(TRUE,FALSE), LETTERS[10:15])
+x
+```
+```{r}
+x[c(1,4,5)]
+```
+```{r}
+x[5]<-c(-2,1)
+x
+```
+
+```{r}
+x[5]<-list(c(-2,1))
+x
+```
+
+```{r}
+y<-c(1,2,3)
+y
+y[4]<-"toto"
+y
+```
 
 
