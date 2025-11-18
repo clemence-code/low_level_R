@@ -143,10 +143,19 @@ c(numeric(0), 5, numeric(0))
 x
 x[c(-1,-4,-12)]#remove
 ```
+```{r}
+x
+x[c(1,4)]<-c(-34,42)
+x
+x[c(2,10)]<-c(123,78)
+x
+```
 
 ```{r}
 y<-c("A","B","C")
 y
-y[c()]
+y[c(TRUE, FALSE, TRUE)]
 ```
+
+
 
