@@ -89,3 +89,14 @@ str_length(complicated)
 #str_length(some_values)
 ```
 
+### Indexing
+
+```{r}
+x<-c(6,5,1,2,3,4)
+x[3]
+```
+```{r}
+x[4]<-15#change the forth element
+x
+```
+
