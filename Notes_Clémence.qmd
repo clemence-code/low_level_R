@@ -56,9 +56,17 @@ str_length(z)
 ```
 
 ```{r}
-complicated <-"💕😁😉😉😆 R是一门很好的编程语言"
+complicated <-"💕😁😉😉😆R是一门很好的编程语言"
 length(complicated)
 str_length(complicated)
+```
+
+```{r}
+some_values <- c("💕😁😉😉😆","R是一门很好的编程语言")
+some_values
+length(some_values)
+str_length(some_values)
+str_to_upper(some_values)
 ```
 
 
