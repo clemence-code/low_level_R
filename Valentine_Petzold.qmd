@@ -4,3 +4,24 @@ author: "Valentine Petzold"
 format: html
 ---
 
+## Types and classes 
+```{r}
+typeof(1.5)#double: numerical value
+typeof("toto")
+typeof('also between single quotes')
+typeof(TRUE)
+typeof(1L)
+typeof(1)
+typeof(typeof)
+typeof(list())
+```
+types defined set with associated operations.
+double roughly real numbers.
+everything id a double if you don't tell R integer.
+logical for testing.
+
+```{r}
+
+```
+
+
