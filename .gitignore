@@ -3,5 +3,13 @@
 .RData
 .Ruserdata
 .DS_Store
+<<<<<<< HEAD
 Valentine_Petzold.html
 Valentine_Petzold_files
+=======
+cache
+download
+README.html
+Notes_Clémence.html
+Notes_Clémence_files
+>>>>>>> 2cfd06dd15927266e18a6206376851a75bcdab06
