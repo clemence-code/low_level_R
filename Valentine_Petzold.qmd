@@ -5,6 +5,7 @@ format: html
 ---
 
 ## Types and classes 
+### Types
 ```{r}
 typeof(1.5)#double: numerical value
 typeof("toto")
@@ -19,9 +20,13 @@ types defined set with associated operations.
 double roughly real numbers.
 everything id a double if you don't tell R integer.
 logical for testing.
-
+### Classes
 ```{r}
-
+iris
+typeof(iris)
+class(iris)
 ```
+
+
 
 
