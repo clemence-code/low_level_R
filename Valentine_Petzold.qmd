@@ -99,4 +99,54 @@ x[3]
 x[4]<-15#change the forth element
 x
 ```
+Assignment can be understood has a value semantic assignment: 'x' and 'y' are different vectors with the same initial content.
+```{r}
+y<-x
+y
+```
+Therefore, modifying 'x' has no effect on 'y'.
+```{r}
+x[1]<-18
+x
+y
+```
+Indexing is made with vectors of any length.
+```{r}
+x
+x[c(2,2,1,4,3)]
+```
+```{r}
+x[0]#only one that does not work bc negative numbers work as well, no possible meaning -> empty numeric vector
+x[7]
+x[10]#too large gives NA, no value there -> not available
+```
+```{r}
+typeof(numeric(0))
+length(numeric)
+```
+```{r}
+typeof(NA)
+length(NA)
+```
+```{r}
+typeof(NA_integer_)
+NA_integer_
+```
+```{r}
+x
+x[c(4, 1, 0, 15)]
+```
+```{r}
+c(numeric(0), 5, numeric(0))
+```
+```{r}
+x
+x[c(-1,-4,-12)]#remove
+```
+
+```{r}
+y<-c("A","B","C")
+y
+y[c()]
+```
 
