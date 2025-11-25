@@ -277,3 +277,44 @@ x[[4]]<-1:15#sequence of integers from 1 to 15
 x
 ```
 
+```{r}
+x[[c(1,2)]]
+x[[c(3,2)]]#second element of the third cat of the list
+
+```
+```{r}
+y<-list(1:4,list(letters[1:5],list(c("foo","bar"))))
+y
+y[[2]]
+y[[c(2,1)]]#double bracket extract things
+y[[c(2,2,1,2)]] #build trees very imp in computer science the double brackets go in the element
+```
+### Names
+
+```{r}
+z<-list(keys=c("A","B","C"), values=c(10,11,12), key=c(TRUE,FALSE))
+z
+z[[1]]
+z$keys#named access with the dollar operator is similar to the double bracket
+z$val#automatik name completion, funny but dangerous, incorrect optimisation
+z$key
+z$ke
+z[["keys"]]
+z[["val"]]#exact matching only
+z["values"]
+z["values"]|> class()
+z[["values"]]|> class()
+
+```
+
+Important remark: a data frame is a list in which each element (each colomn) has the same length.
+
+```{r}
+names(z)
+```
+
+```{r}
+names(z)<-c("A","B","C")
+z
+```
+
