@@ -542,3 +542,39 @@ g(5)
 ```
 rm(z) z doesn't exist anymore.
 
+### Vector 'interpolation' (broacasting)
+
+Why is that working?
+
+```{r}
+x<-c(1,2,3)
+x+1
+```
+
+Most operation in R are vectorized: the same operation is applied by default to all the elements of a vector. To ease that, vectors can be expanded to match a certain length, simply by copying the values of the vector a certain number of times. 
+
+For instance, '1' can be interpreted as 'c(1,1,1,1)' if this is needed for a comnbination with a length 3 vector (as above). 
+
+```{r}
+x>=2
+```
+```{r}
+set.seed(42) #ensure reproductability by starting the random number generator in state 42 (any integer works)
+x<-runif(20, min=-1, max=1)#a random vector with a uniform distribution (mean=0)
+x
+sum(x>0)
+sum(x>mean(x))
+length(x[x>mean(x)])
+```
+```{r}
+u<-c(1,2,3)
+v<-c(4,5)# if we duplicate v ...
+u+v
+```
+```{r}
+u<-c(1,2,3,4)
+v<-c(-1, 1) #need to duplicate v
+u+v
+u*v
+```
+
