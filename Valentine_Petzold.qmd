@@ -318,3 +318,105 @@ names(z)<-c("A","B","C")
 z
 ```
 
+### Functions
+
+Very important. R extensions (packages) consist essentially in collections of functions.
+
+```{r}
+names
+```
+
+a function is an object that you can call by adding parentheses after the function name and possibly parameters inside the parentheses (effective parameters/formal parameters)
+
+```{r}
+log
+```
+In R, functions can have multiples formal parameters and some of them may have default values. When a function is called, one has to specify in general at least the values ofr the parameters without a default value.
+
+```{r}
+log(10)##base takes the default value (e)
+log(10,10)## now base=10
+```
+
+```{r}
+seq.int
+```
+```{r}
+seq.int(1,10)#by is set to 1
+seq.int(10,1)#by is set to -1
+
+```
+
+### Creating functions
+
+This is done with the 'function' key word.
+
+```{r}
+my_fun<-function(x,y) { ##between parenthesis we specify the formal parameters 
+  ##between the curly braces {} we describe the operations implemented by
+  ##the function
+  2*abs(x-y)/(abs(x)+abs(y)+1e-15)
+  
+}
+```
+
+```{r}
+my_fun
+functionBody(my_fun)
+```
+
+
+```{r}
+my_fun(1,2)
+my_fun(2,1)
+my_fun(2,2)
+my_fun(0,0)
+```
+Function execution is essentially running the code inside the body the function after replacing the formal parameters by the values used as effective parameters at the call point. The value of the call is the last value computed in the function. 
+
+```{r}
+my_fun(4,1)  #x=4 and y=1
+```
+
+```{r}
+my_second_fun<-function(x,y) {
+  z<-x+y
+  z/y
+  z/x
+}
+```
+
+```{r}
+my_second_fun(1,2)
+```
+A variable defined in a function is private to the function. It does not care about existing variables with the same name and it dissapears just before the end of the function execution.
+
+```{r}
+z<-10
+my_second_fun(1,2)
+z
+```
+### Default parameters
+
+To specify a default value for a parameter, we add a equal sign '=' after the formal parameter name followed by the default value.
+
+```{r}
+x_to_y<-function(x,y=2) {
+  x^y
+}
+```
+
+```{r}
+x_to_y(2,3)
+x_to_y(10)
+```
+Standard calls use positional effective parameters: all effective parameters are specified in the order of the formal parameters. 
+
+This can be combined with named effective parameters: the name pf the format parameter is used in the call, followed by an egal sigb and the chosen value. In this case, order does not matter anymore. 
+
+```{r}
+x_to_y(y=4,x=2) #2^4
+```
+
+Position and names can be combined if all names are after the unnamed parameters. 
+
