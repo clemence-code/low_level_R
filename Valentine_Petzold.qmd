@@ -250,5 +250,30 @@ y
 y[4]<-"toto"
 y
 ```
+```{r}
+class(x)
+#class(x(1))#reduce your list to its first element
+```
 
+The indexing operation '[]' does not change the type or the class of the corresponding object.
+
+### Double brackets
+
+```{r}
+x<-list(c(1,2,3), c(TRUE,FALSE), LETTERS[10:15])
+x[1] 
+x[[1]]
+```
+
+```{r}
+x[2] <-"toto"
+x
+```
+
+```{r}
+x<-list(c(1,2,3), c(TRUE,FALSE), LETTERS[10:15])
+x[[2]]<-c("tot","bar")
+x[[4]]<-1:15#sequence of integers from 1 to 15
+x
+```
 
