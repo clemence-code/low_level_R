@@ -506,8 +506,39 @@ my_data<- list(x=1:10,
 my_data
 lapply(my_data, mean, na.rn=TRUE)
 lapply(my_data, \(x) mean(x,na.rm=TRUE))
+lapply(my_data, \(x) 1+2*log(x))
 ```
+### Closure
 
+```{r}
+power_function<-function(y){
+  \(x) x^y#closure:a function +some values
+}
+to_the_cube<-power_function(3)
+to_the_cube(1:10)
+to_the_cube
+\(x) x^y
+power_function(4)(4)
+```
+A function calling another one.
 
-
+```{r}
+x_to_y <-function(x,y) {
+  x^y
+}
+f<-\(x) x_to_y(x,2)
+f(5)
+f
+```
+```{r}
+z<-3
+g<-\(x) x_to_y(x,z)
+g(3)
+z<-4
+g(3)
+g
+z<-NULL
+g(5)
+```
+rm(z) z doesn't exist anymore.
 
