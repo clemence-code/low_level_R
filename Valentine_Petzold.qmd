@@ -469,15 +469,44 @@ my_data
 ```
 
 ```{r}
-lappply(my_data, mean)
+lapply(my_data, mean)
 ```
 
-In this version, the parameter 'na.rn' is set to 'TRUE' in all the mean calculations.
+In this version, the parameter 'na.rm' is set to 'TRUE' in all the mean calculations.
 
 ```{r}
-lapply(my_data, mean, na.rn=TRUE)
+lapply(my_data, mean, na.rm=TRUE)
 ```
 
+### Anonymous functions aka lambdas
+
+Compact function declaration (can be used directly as parameters).
+
+```{r}
+\(x) x^2 #in parentheses the parameter you define
+```
+
+```{r}
+(\(x) x^2) |>class()
+```
+```{r}
+log(1:10, base=10)
+```
+A complicated way of ddoing something simple. 
+
+```{r}
+sapply(1:10, \(x, y) 1+y*log(x), y=2)
+```
+```{r}
+1+2*log(1:10)
+```
+```{r}
+my_data<- list(x=1:10,
+               y=c(NA,2:5,NA,6:20))
+my_data
+lapply(my_data, mean, na.rn=TRUE)
+lapply(my_data, \(x) mean(x,na.rm=TRUE))
+```
 
 
 
